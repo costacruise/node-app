@@ -1,0 +1,30 @@
+{
+  "name": "node-app",
+  "version": "1.0.0",
+  "description": "Common utilities for running a node app",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test istanbul cover node_modules/mocha/bin/_mocha test/*.js test/**/*.js -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/costacruise/node-app.git"
+  },
+  "author": "Aishwarya Singhal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/costacruise/node-app/issues"
+  },
+  "homepage": "https://github.com/costacruise/node-app",
+  "devDependencies": {
+    "istanbul": "^0.3.14",
+    "mocha": "^2.2.5",
+    "sinon": "^1.14.1"
+  },
+  "dependencies": {
+    "js-yaml": "^3.3.1",
+    "nconf": "^0.7.1",
+    "nconf-yaml": "^1.0.0",
+    "winston": "^1.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+foo:
+  bar
+http:
+  maxSockets:
+    1024
