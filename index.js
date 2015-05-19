@@ -1,7 +1,7 @@
 /* jslint node: true */
 'use strict';
 
-exports = {
+module.exports = {
   config: require('./lib/config'),
   logger: require('./lib/logger')
 };
