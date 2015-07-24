@@ -1,2 +1,6 @@
 foo:
   bar
+security:
+  jwt:
+    secret: some-secret
+    expiry: 10
