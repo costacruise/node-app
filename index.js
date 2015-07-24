@@ -3,5 +3,6 @@
 
 module.exports = {
   config: require('./lib/config'),
-  logger: require('./lib/logger')
+  logger: require('./lib/logger'),
+  security: require('./lib/security')
 };
