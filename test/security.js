@@ -31,6 +31,11 @@ describe('Security', function () {
       assert.equal(true, security.isValidToken(token, 'test', '1.1.1.1'));
     });
 
+    it('should ignore case for the username', function () {
+      var token = jwt.sign({ username: 'test', ipAddress: '1.1.1.1' }, 'some-secret', { expiresInSeconds: 1800 });
+      assert.equal(true, security.isValidToken(token, 'TesT', '1.1.1.1'));
+    });
+
     it('should identify an invalid token', function () {
       var token = jwt.sign({ username: 'test', ipAddress: '1.1.1.1' }, 'some-secret', { expiresInSeconds: 1800 });
       assert.equal(false, security.isValidToken(token, 'test123', '1.1.1.1'));
