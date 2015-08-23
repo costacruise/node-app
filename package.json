@@ -1,6 +1,6 @@
 {
   "name": "@costadigital/node-app",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Common utilities for running a node app",
   "main": "index.js",
   "scripts": {

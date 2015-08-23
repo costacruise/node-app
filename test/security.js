@@ -49,6 +49,14 @@ describe('Security', function () {
         done();
       }, 1100);
     });
+
+    it('should not reject an expired token when expiry not required', function (done) {
+      var token = jwt.sign({ username: 'test', ipAddress: '1.1.1.1' }, 'some-secret', { expiresInSeconds: 1 });
+      setTimeout(function() {
+        assert.equal(true, security.isValidToken(token, 'test', '1.1.1.1', true));
+        done();
+      }, 1100);
+    });
   });
 });
 
